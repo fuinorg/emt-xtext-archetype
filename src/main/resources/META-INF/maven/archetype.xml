@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><archetype>
+  <id>org.fuin.archetypes.emt.emt-xtext-archetype</id>
+  <resources>
+    <resource>.gitignore</resource>
+    <resource>.launch\Generate Language Infrastructure (__dslName__).launch</resource>
+    <resource>.launch\Launch Runtime Eclipse.launch</resource>
+    <resource>.project</resource>
+    <resource>org.fuin.xsample.dsl\.classpath</resource>
+    <resource>org.fuin.xsample.dsl\.gitignore</resource>
+    <resource>org.fuin.xsample.dsl\.project</resource>
+    <resource>org.fuin.xsample.dsl\build.properties</resource>
+    <resource>org.fuin.xsample.dsl\META-INF\MANIFEST.MF</resource>
+    <resource>org.fuin.xsample.dsl\pom.xml</resource>
+    <resource>org.fuin.xsample.dsl\README.md</resource>
+    <resource>org.fuin.xsample.dsl\src\__pkgPath__\Generate__dslName__.mwe2</resource>
+    <resource>org.fuin.xsample.dsl\src\__pkgPath__\__dslName__.xtext</resource>
+    <resource>org.fuin.xsample.repository\.gitignore</resource>
+    <resource>org.fuin.xsample.repository\.project</resource>
+    <resource>org.fuin.xsample.repository\category.xml</resource>
+    <resource>org.fuin.xsample.repository\pom.xml</resource>
+    <resource>org.fuin.xsample.repository\README.md</resource>
+    <resource>org.fuin.xsample.repository\__techName__.product</resource>
+    <resource>org.fuin.xsample.sdk\.gitignore</resource>
+    <resource>org.fuin.xsample.sdk\.project</resource>
+    <resource>org.fuin.xsample.sdk\build.properties</resource>
+    <resource>org.fuin.xsample.sdk\feature.properties</resource>
+    <resource>org.fuin.xsample.sdk\feature.xml</resource>
+    <resource>org.fuin.xsample.sdk\pom.xml</resource>
+    <resource>org.fuin.xsample.sdk\README.md</resource>
+    <resource>org.fuin.xsample.tests\.classpath</resource>
+    <resource>org.fuin.xsample.tests\.gitignore</resource>
+    <resource>org.fuin.xsample.tests\.project</resource>
+    <resource>org.fuin.xsample.tests\build.properties</resource>
+    <resource>org.fuin.xsample.tests\META-INF\MANIFEST.MF</resource>
+    <resource>org.fuin.xsample.tests\__rootArtifactId__.tests.launch</resource>
+    <resource>org.fuin.xsample.tests\pom.xml</resource>
+    <resource>org.fuin.xsample.tests\README.md</resource>
+    <resource>org.fuin.xsample.ui\.classpath</resource>
+    <resource>org.fuin.xsample.ui\.gitignore</resource>
+    <resource>org.fuin.xsample.ui\.project</resource>
+    <resource>org.fuin.xsample.ui\build.properties</resource>
+    <resource>org.fuin.xsample.ui\META-INF\MANIFEST.MF</resource>
+    <resource>org.fuin.xsample.ui\pom.xml</resource>
+    <resource>org.fuin.xsample.ui\README.md</resource>
+    <resource>README.md</resource>
+    <resource>__techName__-test\.project</resource>
+    <resource>__techName__-test\test.__dslExtension__</resource>
+  </resources>
+</archetype>
