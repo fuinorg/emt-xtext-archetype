@@ -2,6 +2,13 @@ emt-xtext-archeytpe
 ===================
 __Eclipse Maven Tycho XText Archetype__
 
+Continuous Integration   
+----------------------
+
+[![Build Status](https://fuin-org.ci.cloudbees.com/job/emt-xtext-archeytpe/badge/icon)](https://fuin-org.ci.cloudbees.com/job/emt-xtext-archeytpe/)
+
+<a href="https://fuin-org.ci.cloudbees.com/job/emt-xtext-archeytpe"><img src="http://www.fuin.org/images/Button-Built-on-CB-1.png" width="213" height="72" border="0" alt="Built on CloudBees"/></a>
+
 Summary
 -------
 Maven archetype that creates an [Xtext](http://www.eclipse.org/Xtext/ "Xtext") project with a multi module [Maven](http://maven.apache.org/ "Maven") layout and [Tycho](http://eclipse.org/tycho/ "Tycho") (manifest-first approach).
@@ -72,13 +79,6 @@ Import projects in Eclipse
    If you make a mistake you should see an error marker:   
    ![DSL Screenshot Error](https://raw.github.com/fuinorg/emt-xtext-archeytpe/master/www/mydsl-error.jpg)
 
-
-Continuous Integration   
-----------------------
-
-[![Build Status](https://fuin-org.ci.cloudbees.com/job/emt-xtext-archeytpe/badge/icon)](https://fuin-org.ci.cloudbees.com/job/emt-xtext-archeytpe/)
-
-<a href="https://fuin-org.ci.cloudbees.com/job/emt-xtext-archeytpe"><img src="http://www.fuin.org/images/Button-Built-on-CB-1.png" width="213" height="72" border="0" alt="Built on CloudBees"/></a>
 
 Snapshots
 ---------
