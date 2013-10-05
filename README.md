@@ -1,6 +1,6 @@
 emt-xtext-archeytpe
 ===================
-__Eclipse Maven Tycho XText Archetype__
+__Eclipse Maven Tycho Xtext Archetype__
 
 Continuous Integration   
 ----------------------
