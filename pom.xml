@@ -10,7 +10,7 @@
         <version>1.0.6</version>
     </parent>
 
-    <groupId>org.fuin.archetypes.emt</groupId>
+    <groupId>org.fuin.archetypes</groupId>
     <artifactId>emt-xtext-archetype</artifactId>
     <version>0.1.0</version>
     <packaging>maven-archetype</packaging>
@@ -33,14 +33,17 @@
     <build>
         
         <extensions>
+            
             <extension>
                 <groupId>org.apache.maven.archetype</groupId>
                 <artifactId>archetype-packaging</artifactId>
                 <version>2.2</version>
             </extension>
+            
         </extensions>
         
         <plugins>
+        
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-archetype-plugin</artifactId>
