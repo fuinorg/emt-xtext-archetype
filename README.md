@@ -86,9 +86,9 @@ mvn archetype:generate \
 <tr><td>fullName</td><td>My DSL</td><td>A short descriptive name of the DSL</td></tr>
 <tr><td>description</td><td>A cool Xtext based DSL</td><td>A full description of the DSL</td></tr>
 <tr><td>artifactId</td><td>com.mycompany.mydsl</td><td>Maven 'artifactId'</td></tr>
-<tr><td>rootArtifactId</td><td>com.mycompany.mydsl</td><td>Sub modules something like '.dsl' to this one to create their Maven 'artifactId'</td></tr>
+<tr><td>rootArtifactId</td><td>com.mycompany.mydsl</td><td>Sub modules add something like '.dsl' to this one to create their Maven 'artifactId'</td></tr>
 <tr><td>version</td><td>0.1.0-SNAPSHOT</td><td>Maven 'version'</td></tr>
-<tr><td>eclipseVersion</td><td>0.1.0.qualifier</td><td>Eclipse version - Should be identical to the Maven version except for snapshots (with '.qualifier' instead of '-SNAPSHOT')</td></tr>
+<tr><td>eclipseVersion</td><td>0.1.0.qualifier</td><td>Eclipse version - Should be identical to the Maven version except for snapshots (with a '.qualifier' instead of '-SNAPSHOT')</td></tr>
 <tr><td>vendorName</td><td>Your Company Name</td><td>Full name of your organization - Used for example in the Eclipse 'product' description</td></tr>
 <tr><td>vendorUrl</td><td>http:&#47;&#47;www.mycompany.com</td><td>Company URL - Used for example in the Eclipse 'product' description</td></tr>
 <tr><td>githubRepo</td><td>yourcompany/mydsl</td><td>The path after 'https:&#47;&#47;github.com/' - The archetype assumes you will have a repository on GitHub</td></tr>
