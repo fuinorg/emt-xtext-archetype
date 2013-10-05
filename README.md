@@ -45,12 +45,55 @@ Prerequisites
 Create project
 --------------
 
+**Mandatory Parameters**
 ```
 mvn archetype:generate \
      -DarchetypeGroupId=org.fuin.archetypes \
      -DarchetypeArtifactId=emt-xtext-archetype \
      -DarchetypeVersion=0.1.0
 ```
+
+**All Parameters**
+```
+mvn archetype:generate \
+     -DarchetypeGroupId=org.fuin.archetypes \
+     -DarchetypeArtifactId=emt-xtext-archetype \
+     -DarchetypeVersion=0.1.0 \
+	 -DtechName="mydsl" \
+	 -DgroupId="com.mycompany.mydsl" \
+	 -Dpackage="com.mycompany.mydsl" \
+	 -DdslName="MyDSL" \
+	 -DdslExtension="mydsl" \
+	 -DfullName="My DSL" \
+	 -Ddescription="A cool Xtext based DSL" \
+	 -DartifactId="com.mycompany.mydsl" \
+	 -DrootArtifactId="com.mycompany.mydsl" \
+	 -Dversion="0.1.0-SNAPSHOT" \
+	 -DeclipseVersion="0.1.0.qualifier" \
+	 -DvendorName="Your Company Name" \
+	 -DvendorUrl="http://www.mycompany.com" \
+	 -DgithubRepo="yourcompany/mydsl"
+```
+
+**Explanation**
+<table border="1" style="font-size:0.9em; text-align:left; vertical-align:top; padding-top:5px; padding-bottom:4px;">
+<tr><th>Parameter</th><th>Default Value</th><th>Description</th></tr>
+<tr><td>techName</td><td>mydsl</td><td>A short technical name of the DSL - Only lower case characters ('a'-'z', No spaces)</td></tr>
+<tr><td>groupId</td><td>com.mycompany.mydsl</td><td>Maven 'groupId'</td></tr>
+<tr><td>package</td><td>com.mycompany.mydsl</td><td>Java Package (Should be most of the times identical to the 'groupId')</td></tr>
+<tr><td>dslName</td><td>MyDSL</td><td>Unique short name of the DSL - Only upper and lower case characters ('A'-'Z', 'a'-'z', No spaces)</td></tr>
+<tr><td>dslExtension</td><td>mydsl</td><td>File extension for the DSL model files</td></tr>
+<tr><td>fullName</td><td>My DSL</td><td>A short descriptive name of the DSL</td></tr>
+<tr><td>description</td><td>A cool Xtext based DSL</td><td>A full description of the DSL</td></tr>
+<tr><td>artifactId</td><td>com.mycompany.mydsl</td><td>Maven 'artifactId'</td></tr>
+<tr><td>rootArtifactId</td><td>com.mycompany.mydsl</td><td>Sub modules something like '.dsl' to this one to create their Maven 'artifactId'</td></tr>
+<tr><td>version</td><td>0.1.0-SNAPSHOT</td><td>Maven 'version'</td></tr>
+<tr><td>eclipseVersion</td><td>0.1.0.qualifier</td><td>Eclipse version - Should be identical to the Maven version except for snapshots (with '.qualifier' instead of '-SNAPSHOT')</td></tr>
+<tr><td>vendorName</td><td>Your Company Name</td><td>Full name of your organization - Used for example in the Eclipse 'product' description</td></tr>
+<tr><td>vendorUrl</td><td>http:&#47;&#47;www.mycompany.com</td><td>Company URL - Used for example in the Eclipse 'product' description</td></tr>
+<tr><td>githubRepo</td><td>yourcompany/mydsl</td><td>The path after 'https:&#47;&#47;github.com/' - The archetype assumes you will have a repository on GitHub</td></tr>
+</table>
+
 
 Import projects in Eclipse
 --------------------------
