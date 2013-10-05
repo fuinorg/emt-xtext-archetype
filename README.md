@@ -65,7 +65,7 @@ Import projects in Eclipse
 	It is recommended to use the ANTLR 3 parser generator (BSD licence - http://www.antlr.org/license.html).
 	Do you agree to download it (size 1MB) from 'http://download.itemis.com/antlr-generator-3.2.0.jar'? (type 'y' or 'n' and hit enter)
 	```
-	** Do NOT agree and press 'n' **
+	*Do NOT agree and press 'n'*
 	
 3. Test Plugin (Run / Run Configurations... / Eclipse Application / Launch Runtime Eclipse)
    
