@@ -144,5 +144,7 @@ Add the following to your .m2/settings.xml to enable snapshots:
 </repository>
 ```
 
+More Archteypes
+---------------
 
-
+If you're looking for more Maven archetypes, take a look at [Open Archetypes](https://github.com/open-archetypes "Open Archetypes").
