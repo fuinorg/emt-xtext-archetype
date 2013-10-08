@@ -1,4 +1,4 @@
-emt-xtext-archeytpe
+emt-xtext-archetype
 ===================
 __Eclipse Maven Tycho Xtext Archetype__
 
