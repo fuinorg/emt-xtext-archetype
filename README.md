@@ -38,7 +38,7 @@ Prerequisites
 * Java JDK 1.6 is installed
 * [Maven 3](http://maven.apache.org/download.cgi#Installation "Apache Maven Installation") is installed.
 * Eclipse with Xtext is installed ([Download Pre-Configured Eclipse With Xtext](http://www.eclipse.org/Xtext/download.html "Download Eclipse with Xtext"))
-* __Looks like this is no longer necessary__ Install "Xtext Antlr-2.1.0" (Help / Install New Software... / Work with "http://download.itemis.com/updates/releases/" / Install "Xtext Antlr-2.1.0") 
+* __Looks like the following is no longer necessary (2013-12-31)__ Install "Xtext Antlr-2.1.0" (Help / Install New Software... / Work with "http://download.itemis.com/updates/releases/" / Install "Xtext Antlr-2.1.0") 
 * M2E Eclipse Plugin is installed (Help / Eclipse Market Place... / Find "M2E" / Install "Maven Integration for Eclipse (Juno and newer)")  
 * M2E Tycho Connector is installed (Window /Prefences / Maven / Discovery / Open Catalog / Install M2E Connectors / Find "Tycho" / Install "Tycho Configurator") 
 
