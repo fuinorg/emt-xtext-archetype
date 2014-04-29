@@ -148,3 +148,7 @@ More Archteypes
 ---------------
 
 If you're looking for more Maven archetypes, take a look at [Open Archetypes](https://github.com/open-archetypes "Open Archetypes").
+
+<a href="http://with-eclipse.github.io/" target="_blank">
+<img alt="with-Eclipse logo" src="http://with-eclipse.github.io/with-eclipse-0.jpg" /></a>
+
