@@ -122,6 +122,21 @@ Import projects in Eclipse
    If you make a mistake you should see an error marker:   
    ![DSL Screenshot Error](https://raw.github.com/fuinorg/emt-xtext-archeytpe/master/www/mydsl-error.jpg)
 
+4. Add the Eclipse and Xtext repositories to your .m2/settings.xml to make them accessible for Maven:
+```xml
+<repositories>
+    <repository>
+        <id>eclipse-luna</id>
+        <layout>p2</layout>
+        <url>http://download.eclipse.org/releases/luna</url>
+    </repository>
+    <repository>
+        <id>xtext-update-site</id>
+        <layout>p2</layout>
+        <url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
+    </repository>
+</repositories>
+```
 
 Snapshots
 ---------
