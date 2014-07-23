@@ -41,6 +41,22 @@ Prerequisites
 * __Looks like the following is no longer necessary (2013-12-31)__ Install "Xtext Antlr-2.1.0" (Help / Install New Software... / Work with "http://download.itemis.com/updates/releases/" / Install "Xtext Antlr-2.1.0") 
 * M2E Eclipse Plugin is installed (Help / Eclipse Market Place... / Find "M2E" / Install "Maven Integration for Eclipse (Juno and newer)")  
 * M2E Tycho Connector is installed (Window /Prefences / Maven / Discovery / Open Catalog / Install M2E Connectors / Find "Tycho" / Install "Tycho Configurator") 
+* The Eclipse and Xtext repositories are added to your .m2/settings.xml to make them accessible for Maven:
+```xml
+<repositories>
+    <repository>
+        <id>eclipse-luna</id>
+        <layout>p2</layout>
+        <url>http://download.eclipse.org/releases/luna</url>
+    </repository>
+    <repository>
+        <id>xtext-update-site</id>
+        <layout>p2</layout>
+        <url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
+    </repository>
+</repositories>
+```
+
 
 Create project
 --------------
@@ -122,21 +138,6 @@ Import projects in Eclipse
    If you make a mistake you should see an error marker:   
    ![DSL Screenshot Error](https://raw.github.com/fuinorg/emt-xtext-archeytpe/master/www/mydsl-error.jpg)
 
-4. Add the Eclipse and Xtext repositories to your .m2/settings.xml to make them accessible for Maven:
-```xml
-<repositories>
-    <repository>
-        <id>eclipse-luna</id>
-        <layout>p2</layout>
-        <url>http://download.eclipse.org/releases/luna</url>
-    </repository>
-    <repository>
-        <id>xtext-update-site</id>
-        <layout>p2</layout>
-        <url>http://download.eclipse.org/modeling/tmf/xtext/updates/composite/releases/</url>
-    </repository>
-</repositories>
-```
 
 Snapshots
 ---------
