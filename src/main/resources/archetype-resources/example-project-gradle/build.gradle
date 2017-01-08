@@ -1,0 +1,37 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+
+plugins {
+  id "eclipse"
+  id "org.xtext.xtend" version "1.0.0"
+  id "org.xtext.builder" version "1.0.0"
+}
+
+repositories {
+    mavenLocal() // This is required so that the ${techName} (which you previously 'mvn install' using Tycho) is found  
+    jcenter()
+}
+
+dependencies {
+    xtextLanguages '${package}:${package}:${version}'
+
+    compile 'org.eclipse.xtend:org.eclipse.xtend.lib:2.9.0'
+    testCompile 'junit:junit:4.12'
+}
+
+xtext {
+    languages {
+        herolang {
+            fileExtension = 'hero'
+            setup = '${basePackage}.${dslName}StandaloneSetup'
+            generator.outlet.producesJava = true
+        }
+    }
+
+    sourceSets {
+        main {
+            srcDir 'src/main/heroes'
+        }
+    }
+}

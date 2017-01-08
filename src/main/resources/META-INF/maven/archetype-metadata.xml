@@ -1,179 +1,575 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<archetype-descriptor name="org.fuin.archetypes.emt.emt-xtext-archetype">
-  
-    <requiredProperties>
-        <requiredProperty key="techName">
-            <defaultValue>mydsl</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="groupId">
-            <defaultValue>com.mycompany.mydsl</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="package">
-            <defaultValue>com.mycompany.mydsl</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="dslName">
-            <defaultValue>MyDSL</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="dslExtension">
-            <defaultValue>mydsl</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="fullName">
-            <defaultValue>My DSL</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="description">
-            <defaultValue>A cool Xtext based DSL</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="artifactId">
-            <defaultValue>com.mycompany.mydsl</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="rootArtifactId">
-            <defaultValue>com.mycompany.mydsl</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="version">
-            <defaultValue>0.1.0-SNAPSHOT</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="eclipseVersion">
-            <defaultValue>0.1.0.qualifier</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="vendorName">
-            <defaultValue>Your Company Name</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="vendorUrl">
-            <defaultValue>http://www.mycompany.com</defaultValue>
-        </requiredProperty>
-        <requiredProperty key="githubRepo">
-            <defaultValue>yourcompany/mydsl</defaultValue>
-        </requiredProperty>
-    </requiredProperties>
-    
-  <fileSets>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>__techName__-test</directory>
-      <includes>
-        <include>**/*.project</include>
-        <include>**/*.__dslExtension__</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory>.launch</directory>
-      <includes>
-        <include>**/*.launch</include>
-      </includes>
-    </fileSet>
-    <fileSet filtered="true" encoding="UTF-8">
-      <directory></directory>
-      <includes>
-        <include>.project</include>
-        <include>.gitignore</include>
-        <include>README.md</include>
-      </includes>
-    </fileSet>
-  </fileSets>
-  
-  <modules>
-  
-    <module id="dsl" dir="__rootArtifactId__.dsl" name="dsl">
-      <fileSets>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>src/__pkgPath__</directory>
-          <includes>
-            <include>**/*.mwe2</include>
-            <include>**/*.xtext</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>META-INF</directory>
-          <includes>
-            <include>**/*.MF</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>.classpath</include>
-            <include>.project</include>
-            <include>build.properties</include>
-            <include>.gitignore</include>
-            <include>README.md</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    
-    <module id="sdk" dir="__rootArtifactId__.sdk" name="sdk">
-      <fileSets>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>.project</include>
-            <include>build.properties</include>
-            <include>feature.properties</include>
-            <include>feature.xml</include>
-            <include>.gitignore</include>
-            <include>README.md</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    
-    <module id="ui" dir="__rootArtifactId__.ui" name="ui">
-      <fileSets>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>META-INF</directory>
-          <includes>
-            <include>**/*.MF</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>.classpath</include>
-            <include>.project</include>
-            <include>build.properties</include>
-            <include>.gitignore</include>
-            <include>README.md</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-   
-    <module id="tests" dir="__rootArtifactId__.tests" name="tests">
-      <fileSets>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory>META-INF</directory>
-          <includes>
-            <include>**/*.MF</include>
-          </includes>
-        </fileSet>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>.classpath</include>
-            <include>.project</include>
-            <include>build.properties</include>
-            <include>.gitignore</include>
-            <include>__rootArtifactId__tests.launch</include>
-            <include>README.md</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    
-    <module id="repository" dir="__rootArtifactId__.repository" name="repository">
-      <fileSets>
-        <fileSet filtered="true" encoding="UTF-8">
-          <directory></directory>
-          <includes>
-            <include>.project</include>
-            <include>category.xml</include>
-            <include>.gitignore</include>
-            <include>README.md</include>
-            <include>__techName__.product</include>
-          </includes>
-        </fileSet>
-      </fileSets>
-    </module>
-    
-  </modules>
-  
+<archetype-descriptor name="org.fuin.archetypes.emt-xtext-archetype">
+
+	<requiredProperties>
+				<requiredProperty key="groupId"><defaultValue>com.mycompany.mydsl</defaultValue></requiredProperty>
+				<requiredProperty key="artifactId"><defaultValue>com.mycompany.mydsl</defaultValue></requiredProperty>
+				<requiredProperty key="version"><defaultValue>0.1.0-SNAPSHOT</defaultValue></requiredProperty>
+				<requiredProperty key="eclipseVersion"><defaultValue>0.1.0.qualifier</defaultValue></requiredProperty>
+				<requiredProperty key="package"><defaultValue>com.mycompany.mydsl</defaultValue></requiredProperty>
+				<requiredProperty key="packagePath"><defaultValue>com/mycompany/mydsl</defaultValue></requiredProperty>
+				<requiredProperty key="basePackage"><defaultValue>com.mycompany</defaultValue></requiredProperty>
+				<requiredProperty key="basePackagePath"><defaultValue>com/mycompany</defaultValue></requiredProperty>
+				<requiredProperty key="dslName"><defaultValue>MyDSL</defaultValue></requiredProperty>
+				<requiredProperty key="techName"><defaultValue>mydsl</defaultValue></requiredProperty>
+				<requiredProperty key="dslExtension"><defaultValue>mydsl</defaultValue></requiredProperty>
+				<requiredProperty key="fullName"><defaultValue>My DSL</defaultValue></requiredProperty>
+				<requiredProperty key="url"><defaultValue>http://www.mycompany.com/</defaultValue></requiredProperty>
+			</requiredProperties>
+
+	<fileSets>	    
+				<fileSet filtered="true">
+			<directory>__package__.releng/.settings</directory>
+			<includes>
+				<include>org.eclipse.core.resources.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.releng/.settings</directory>
+			<includes>
+				<include>org.eclipse.m2e.core.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.releng</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.releng</directory>
+			<includes>
+				<include>__package__.releng.launch</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.releng</directory>
+			<includes>
+				<include>.project</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project-gradle</directory>
+			<includes>
+				<include>gradlew</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project-gradle</directory>
+			<includes>
+				<include>gradlew.bat</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project-gradle/gradle/wrapper</directory>
+			<includes>
+				<include>gradle-wrapper.properties</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project-gradle</directory>
+			<includes>
+				<include>build.gradle</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project-gradle/src/main/__dslExtension__es</directory>
+			<includes>
+				<include>Super.__dslExtension__</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project-gradle/src/main/java/my/pack</directory>
+			<includes>
+				<include>Foo.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project-gradle/src/test/java/my/hero</directory>
+			<includes>
+				<include>SuperManTest.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__</directory>
+			<includes>
+				<include>plugin.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/.settings</directory>
+			<includes>
+				<include>org.eclipse.jdt.core.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/.settings</directory>
+			<includes>
+				<include>org.eclipse.xtend.core.Xtend.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/.settings</directory>
+			<includes>
+				<include>org.eclipse.core.resources.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/.settings</directory>
+			<includes>
+				<include>org.eclipse.m2e.core.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__</directory>
+			<includes>
+				<include>build.properties</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__</directory>
+			<includes>
+				<include>.classpath</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__</directory>
+			<includes>
+				<include>plugin.xml_gen</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/.launch</directory>
+			<includes>
+				<include>Launch Runtime Eclipse.launch</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/.launch</directory>
+			<includes>
+				<include>Generate Language Infrastructure (__package__).launch</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/src/__basePackagePath__/formatting</directory>
+			<includes>
+				<include>__dslName__Formatter.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/src/__basePackagePath__/jvmmodel</directory>
+			<includes>
+				<include>__dslName__JvmModelInferrer.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/src/__basePackagePath__/scoping</directory>
+			<includes>
+				<include>__dslName__ScopeProvider.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/src/__basePackagePath__</directory>
+			<includes>
+				<include>Generate__dslName__.mwe2</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/src/__basePackagePath__/validation</directory>
+			<includes>
+				<include>__dslName__Validator.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/src/__basePackagePath__</directory>
+			<includes>
+				<include>__dslName__.xtext</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/src/__basePackagePath__</directory>
+			<includes>
+				<include>__dslName__RuntimeModule.java</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/src/__basePackagePath__</directory>
+			<includes>
+				<include>__dslName__StandaloneSetup.java</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/META-INF</directory>
+			<includes>
+				<include>MANIFEST.MF</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__</directory>
+			<includes>
+				<include>.project</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory></directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.sdk/.settings</directory>
+			<includes>
+				<include>org.eclipse.core.resources.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.sdk/.settings</directory>
+			<includes>
+				<include>org.eclipse.m2e.core.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.sdk</directory>
+			<includes>
+				<include>build.properties</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.sdk</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.sdk</directory>
+			<includes>
+				<include>feature.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.sdk</directory>
+			<includes>
+				<include>.project</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui</directory>
+			<includes>
+				<include>plugin.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui/.settings</directory>
+			<includes>
+				<include>org.eclipse.jdt.core.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui/.settings</directory>
+			<includes>
+				<include>org.eclipse.xtend.core.Xtend.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui/.settings</directory>
+			<includes>
+				<include>org.eclipse.core.resources.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui/.settings</directory>
+			<includes>
+				<include>org.eclipse.m2e.core.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui</directory>
+			<includes>
+				<include>build.properties</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui</directory>
+			<includes>
+				<include>.classpath</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui</directory>
+			<includes>
+				<include>plugin.xml_gen</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui/src/__basePackagePath__/ui/labeling</directory>
+			<includes>
+				<include>__dslName__LabelProvider.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui/src/__basePackagePath__/ui/labeling</directory>
+			<includes>
+				<include>__dslName__DescriptionLabelProvider.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui/src/__basePackagePath__/ui/quickfix</directory>
+			<includes>
+				<include>__dslName__QuickfixProvider.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui/src/__basePackagePath__/ui/outline</directory>
+			<includes>
+				<include>__dslName__OutlineTreeProvider.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui/src/__basePackagePath__/ui</directory>
+			<includes>
+				<include>__dslName__UiModule.java</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui/src/__basePackagePath__/ui/contentassist</directory>
+			<includes>
+				<include>__dslName__ProposalProvider.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui/META-INF</directory>
+			<includes>
+				<include>MANIFEST.MF</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ui</directory>
+			<includes>
+				<include>.project</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.updatesite/.settings</directory>
+			<includes>
+				<include>org.eclipse.core.resources.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.updatesite/.settings</directory>
+			<includes>
+				<include>org.eclipse.m2e.core.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.updatesite</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.updatesite</directory>
+			<includes>
+				<include>.project</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.updatesite</directory>
+			<includes>
+				<include>category.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory></directory>
+			<includes>
+				<include>README.md</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.tests/.settings</directory>
+			<includes>
+				<include>org.eclipse.jdt.core.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.tests/.settings</directory>
+			<includes>
+				<include>org.eclipse.xtend.core.Xtend.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.tests/.settings</directory>
+			<includes>
+				<include>org.eclipse.core.resources.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.tests/.settings</directory>
+			<includes>
+				<include>org.eclipse.m2e.core.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.tests</directory>
+			<includes>
+				<include>build.properties</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.tests</directory>
+			<includes>
+				<include>.classpath</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.tests</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.tests</directory>
+			<includes>
+				<include>__package__.tests.launch</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.tests/src/__packagePath__/tests</directory>
+			<includes>
+				<include>SimpleParsingTest.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.tests/META-INF</directory>
+			<includes>
+				<include>MANIFEST.MF</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.tests</directory>
+			<includes>
+				<include>.project</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project/.settings</directory>
+			<includes>
+				<include>org.eclipse.jdt.core.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project/.settings</directory>
+			<includes>
+				<include>org.eclipse.xtend.core.Xtend.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project/.settings</directory>
+			<includes>
+				<include>org.eclipse.core.resources.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project/.settings</directory>
+			<includes>
+				<include>__basePackage__.__dslName__.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project/.settings</directory>
+			<includes>
+				<include>org.eclipse.m2e.core.prefs</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project</directory>
+			<includes>
+				<include>.classpath</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project/src/main/java</directory>
+			<includes>
+				<include>Super.__dslExtension__</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project/src/main/java/my/pack</directory>
+			<includes>
+				<include>Foo.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project/src/test/java/my/hero</directory>
+			<includes>
+				<include>SuperManTest.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>example-project</directory>
+			<includes>
+				<include>.project</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory></directory>
+			<includes>
+				<include>.project</include>
+			</includes>
+		</fileSet>
+						<fileSet filtered="false">
+			<directory>__package__.releng</directory>
+			<includes>
+				<include>.antlr-generator-3.2.0.jar</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="false">
+			<directory>example-project-gradle/gradle/wrapper</directory>
+			<includes>
+				<include>gradle-wrapper.jar</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="false">
+			<directory>example-project-gradle</directory>
+			<includes>
+				<include>.gitignore</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="false">
+			<directory>__package__</directory>
+			<includes>
+				<include>.antlr-generator-3.2.0.jar</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="false">
+			<directory>__package__</directory>
+			<includes>
+				<include>.gitignore</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="false">
+			<directory></directory>
+			<includes>
+				<include>.gitignore</include>
+			</includes>
+		</fileSet>
+			</fileSets>
+
 </archetype-descriptor>

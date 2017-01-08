@@ -1,0 +1,163 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+${symbol_pound}!/usr/bin/env bash
+
+${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}
+${symbol_pound}${symbol_pound}
+${symbol_pound}${symbol_pound}  Gradle start up script for UN*X
+${symbol_pound}${symbol_pound}
+${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}${symbol_pound}
+
+${symbol_pound} Add default JVM options here. You can also use JAVA_OPTS and GRADLE_OPTS to pass JVM options to this script.
+DEFAULT_JVM_OPTS=""
+
+APP_NAME="Gradle"
+APP_BASE_NAME=`basename "${symbol_dollar}0"`
+
+${symbol_pound} Use the maximum available, or set MAX_FD != -1 to use that value.
+MAX_FD="maximum"
+
+warn ( ) {
+    echo "${symbol_dollar}*"
+}
+
+die ( ) {
+    echo
+    echo "${symbol_dollar}*"
+    echo
+    exit 1
+}
+
+${symbol_pound} OS specific support (must be 'true' or 'false').
+cygwin=false
+msys=false
+darwin=false
+case "`uname`" in
+  CYGWIN* )
+    cygwin=true
+    ;;
+  Darwin* )
+    darwin=true
+    ;;
+  MINGW* )
+    msys=true
+    ;;
+esac
+
+${symbol_pound} Attempt to set APP_HOME
+${symbol_pound} Resolve links: ${symbol_dollar}0 may be a link
+PRG="${symbol_dollar}0"
+${symbol_pound} Need this for relative symlinks.
+while [ -h "${symbol_dollar}PRG" ] ; do
+    ls=`ls -ld "${symbol_dollar}PRG"`
+    link=`expr "${symbol_dollar}ls" : '.*-> ${symbol_escape}(.*${symbol_escape})${symbol_dollar}'`
+    if expr "${symbol_dollar}link" : '/.*' > /dev/null; then
+        PRG="${symbol_dollar}link"
+    else
+        PRG=`dirname "${symbol_dollar}PRG"`"/${symbol_dollar}link"
+    fi
+done
+SAVED="`pwd`"
+cd "`dirname ${symbol_escape}"${symbol_dollar}PRG${symbol_escape}"`/" >/dev/null
+APP_HOME="`pwd -P`"
+cd "${symbol_dollar}SAVED" >/dev/null
+
+CLASSPATH=${symbol_dollar}APP_HOME/gradle/wrapper/gradle-wrapper.jar
+
+${symbol_pound} Determine the Java command to use to start the JVM.
+if [ -n "${symbol_dollar}JAVA_HOME" ] ; then
+    if [ -x "${symbol_dollar}JAVA_HOME/jre/sh/java" ] ; then
+        ${symbol_pound} IBM's JDK on AIX uses strange locations for the executables
+        JAVACMD="${symbol_dollar}JAVA_HOME/jre/sh/java"
+    else
+        JAVACMD="${symbol_dollar}JAVA_HOME/bin/java"
+    fi
+    if [ ! -x "${symbol_dollar}JAVACMD" ] ; then
+        die "ERROR: JAVA_HOME is set to an invalid directory: ${symbol_dollar}JAVA_HOME
+
+Please set the JAVA_HOME variable in your environment to match the
+location of your Java installation."
+    fi
+else
+    JAVACMD="java"
+    which java >/dev/null 2>&1 || die "ERROR: JAVA_HOME is not set and no 'java' command could be found in your PATH.
+
+Please set the JAVA_HOME variable in your environment to match the
+location of your Java installation."
+fi
+
+${symbol_pound} Increase the maximum file descriptors if we can.
+if [ "${symbol_dollar}cygwin" = "false" -a "${symbol_dollar}darwin" = "false" ] ; then
+    MAX_FD_LIMIT=`ulimit -H -n`
+    if [ ${symbol_dollar}? -eq 0 ] ; then
+        if [ "${symbol_dollar}MAX_FD" = "maximum" -o "${symbol_dollar}MAX_FD" = "max" ] ; then
+            MAX_FD="${symbol_dollar}MAX_FD_LIMIT"
+        fi
+        ulimit -n ${symbol_dollar}MAX_FD
+        if [ ${symbol_dollar}? -ne 0 ] ; then
+            warn "Could not set maximum file descriptor limit: ${symbol_dollar}MAX_FD"
+        fi
+    else
+        warn "Could not query maximum file descriptor limit: ${symbol_dollar}MAX_FD_LIMIT"
+    fi
+fi
+
+${symbol_pound} For Darwin, add options to specify how the application appears in the dock
+if ${symbol_dollar}darwin; then
+    GRADLE_OPTS="${symbol_dollar}GRADLE_OPTS ${symbol_escape}"-Xdock:name=${symbol_dollar}APP_NAME${symbol_escape}" ${symbol_escape}"-Xdock:icon=${symbol_dollar}APP_HOME/media/gradle.icns${symbol_escape}""
+fi
+
+${symbol_pound} For Cygwin, switch paths to Windows format before running java
+if ${symbol_dollar}cygwin ; then
+    APP_HOME=`cygpath --path --mixed "${symbol_dollar}APP_HOME"`
+    CLASSPATH=`cygpath --path --mixed "${symbol_dollar}CLASSPATH"`
+    JAVACMD=`cygpath --unix "${symbol_dollar}JAVACMD"`
+
+    ${symbol_pound} We build the pattern for arguments to be converted via cygpath
+    ROOTDIRSRAW=`find -L / -maxdepth 1 -mindepth 1 -type d 2>/dev/null`
+    SEP=""
+    for dir in ${symbol_dollar}ROOTDIRSRAW ; do
+        ROOTDIRS="${symbol_dollar}ROOTDIRS${symbol_dollar}SEP${symbol_dollar}dir"
+        SEP="|"
+    done
+    OURCYGPATTERN="(^(${symbol_dollar}ROOTDIRS))"
+    ${symbol_pound} Add a user-defined pattern to the cygpath arguments
+    if [ "${symbol_dollar}GRADLE_CYGPATTERN" != "" ] ; then
+        OURCYGPATTERN="${symbol_dollar}OURCYGPATTERN|(${symbol_dollar}GRADLE_CYGPATTERN)"
+    fi
+    ${symbol_pound} Now convert the arguments - kludge to limit ourselves to /bin/sh
+    i=0
+    for arg in "${symbol_dollar}@" ; do
+        CHECK=`echo "${symbol_dollar}arg"|egrep -c "${symbol_dollar}OURCYGPATTERN" -`
+        CHECK2=`echo "${symbol_dollar}arg"|egrep -c "^-"`                                 ${symbol_pound}${symbol_pound}${symbol_pound} Determine if an option
+
+        if [ ${symbol_dollar}CHECK -ne 0 ] && [ ${symbol_dollar}CHECK2 -eq 0 ] ; then                    ${symbol_pound}${symbol_pound}${symbol_pound} Added a condition
+            eval `echo args${symbol_dollar}i`=`cygpath --path --ignore --mixed "${symbol_dollar}arg"`
+        else
+            eval `echo args${symbol_dollar}i`="${symbol_escape}"${symbol_dollar}arg${symbol_escape}""
+        fi
+        i=${symbol_dollar}((i+1))
+    done
+    case ${symbol_dollar}i in
+        (0) set -- ;;
+        (1) set -- "${symbol_dollar}args0" ;;
+        (2) set -- "${symbol_dollar}args0" "${symbol_dollar}args1" ;;
+        (3) set -- "${symbol_dollar}args0" "${symbol_dollar}args1" "${symbol_dollar}args2" ;;
+        (4) set -- "${symbol_dollar}args0" "${symbol_dollar}args1" "${symbol_dollar}args2" "${symbol_dollar}args3" ;;
+        (5) set -- "${symbol_dollar}args0" "${symbol_dollar}args1" "${symbol_dollar}args2" "${symbol_dollar}args3" "${symbol_dollar}args4" ;;
+        (6) set -- "${symbol_dollar}args0" "${symbol_dollar}args1" "${symbol_dollar}args2" "${symbol_dollar}args3" "${symbol_dollar}args4" "${symbol_dollar}args5" ;;
+        (7) set -- "${symbol_dollar}args0" "${symbol_dollar}args1" "${symbol_dollar}args2" "${symbol_dollar}args3" "${symbol_dollar}args4" "${symbol_dollar}args5" "${symbol_dollar}args6" ;;
+        (8) set -- "${symbol_dollar}args0" "${symbol_dollar}args1" "${symbol_dollar}args2" "${symbol_dollar}args3" "${symbol_dollar}args4" "${symbol_dollar}args5" "${symbol_dollar}args6" "${symbol_dollar}args7" ;;
+        (9) set -- "${symbol_dollar}args0" "${symbol_dollar}args1" "${symbol_dollar}args2" "${symbol_dollar}args3" "${symbol_dollar}args4" "${symbol_dollar}args5" "${symbol_dollar}args6" "${symbol_dollar}args7" "${symbol_dollar}args8" ;;
+    esac
+fi
+
+${symbol_pound} Split up the JVM_OPTS And GRADLE_OPTS values into an array, following the shell quoting and substitution rules
+function splitJvmOpts() {
+    JVM_OPTS=("${symbol_dollar}@")
+}
+eval splitJvmOpts ${symbol_dollar}DEFAULT_JVM_OPTS ${symbol_dollar}JAVA_OPTS ${symbol_dollar}GRADLE_OPTS
+JVM_OPTS[${symbol_dollar}{${symbol_pound}JVM_OPTS[*]}]="-Dorg.gradle.appname=${symbol_dollar}APP_BASE_NAME"
+
+exec "${symbol_dollar}JAVACMD" "${symbol_dollar}{JVM_OPTS[@]}" -classpath "${symbol_dollar}CLASSPATH" org.gradle.wrapper.GradleWrapperMain "${symbol_dollar}@"

@@ -1,0 +1,16 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+grammar ${basePackage}.${dslName} with org.eclipse.xtext.xbase.Xbase
+
+generate ${techName} "${url}${dslName}"
+
+Heros:
+	heros+=SuperHero*;
+	
+SuperHero:
+	'hero' name=ID 'can' abilities+=Ability (someCode=XBlockExpression)?;
+	
+enum Ability :
+	FLY | SUPERPOWER | FIRE | ICE
+;

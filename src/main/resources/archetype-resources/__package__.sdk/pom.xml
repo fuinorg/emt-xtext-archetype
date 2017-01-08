@@ -1,0 +1,19 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <relativePath>../${package}.releng/pom.xml</relativePath>
+    <groupId>${package}</groupId>
+    <artifactId>releng</artifactId>
+    <version>${version}</version>
+  </parent>
+
+  <artifactId>${package}.sdk</artifactId>
+  <packaging>eclipse-feature</packaging>
+
+  <name>${fullName} Feature</name>
+</project>

@@ -7,12 +7,12 @@
     <parent>
         <groupId>org.fuin</groupId>
         <artifactId>pom</artifactId>
-        <version>1.0.6</version>
+        <version>1.4.0</version>
     </parent>
 
     <groupId>org.fuin.archetypes</groupId>
     <artifactId>emt-xtext-archetype</artifactId>
-    <version>0.1.0</version>
+    <version>0.2.0-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
     <name>Eclipse Maven Tycho XText Archetype</name>
     
