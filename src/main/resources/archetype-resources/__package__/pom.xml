@@ -1,14 +1,15 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-<?xml version="1.0" encoding="UTF-8"?>
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<relativePath>../${package}.releng/pom.xml</relativePath>
+		<relativePath>../pom.xml</relativePath>
 		<groupId>${package}</groupId>
-		<artifactId>releng</artifactId>
+		<artifactId>parent</artifactId>
 		<version>${version}</version>
 	</parent>
 
@@ -17,42 +18,16 @@
 
 	<name>${fullName} Core</name>
 
+
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-clean-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>gen-clean</id>
-						<phase>clean</phase>
-						<!-- Clean up generated files in all projects -->
-						<configuration>
-							<filesets combine.children="append">
-								<fileset>
-									<directory>${symbol_dollar}{basedir}/src-gen/</directory>
-								</fileset>
-								<fileset>
-									<directory>${symbol_dollar}{basedir}/model/generated/</directory>
-								</fileset>
-								<fileset>
-									<directory>${symbol_dollar}{basedir}/../${symbol_dollar}{project.artifactId}.ui/src-gen/</directory>
-								</fileset>
-								<fileset>
-									<directory>${symbol_dollar}{basedir}/../${symbol_dollar}{project.artifactId}.tests/src-gen/</directory>
-								</fileset>
-							</filesets>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
-				<version>1.2.1</version>
+				<version>1.4.0</version>
 				<executions>
 					<execution>
+						<id>mwe2Launcher</id>
 						<phase>generate-sources</phase>
 						<goals>
 							<goal>java</goal>
@@ -60,23 +35,30 @@
 					</execution>
 				</executions>
 				<configuration>
-					<includeProjectDependencies>false</includeProjectDependencies>
-					<includePluginDependencies>true</includePluginDependencies>
 					<mainClass>org.eclipse.emf.mwe2.launch.runtime.Mwe2Launcher</mainClass>
 					<arguments>
-						<argument>file://${symbol_dollar}{project.basedir}/src/${basePackagePath}/Generate${dslName}.mwe2</argument>
-						<argument>
-							-p
-						</argument>
-						<argument>
-							runtimeProject=/${symbol_dollar}{project.basedir}
-						</argument>
+						<argument>/${symbol_dollar}{project.basedir}/src/${basePackagePath}/Generate${dslName}.mwe2</argument>
+						<argument>-p</argument>
+						<argument>rootPath=/${symbol_dollar}{project.basedir}/..</argument>
 					</arguments>
+					<classpathScope>compile</classpathScope>
+					<includePluginDependencies>true</includePluginDependencies>
+					<cleanupDaemonThreads>false</cleanupDaemonThreads><!-- see https://bugs.eclipse.org/bugs/show_bug.cgi?id=475098${symbol_pound}c3 -->
 				</configuration>
 				<dependencies>
 					<dependency>
+						<groupId>org.eclipse.emf</groupId>
+						<artifactId>org.eclipse.emf.mwe2.launch</artifactId>
+						<version>2.9.0.201605261059</version>
+					</dependency>
+					<dependency>
 						<groupId>org.eclipse.xtext</groupId>
-						<artifactId>org.eclipse.xtext.xtext</artifactId>
+						<artifactId>org.eclipse.xtext.common.types</artifactId>
+						<version>${symbol_dollar}{xtext.version}</version>
+					</dependency>
+					<dependency>
+						<groupId>org.eclipse.xtext</groupId>
+						<artifactId>org.eclipse.xtext.xtext.generator</artifactId>
 						<version>${symbol_dollar}{xtext.version}</version>
 					</dependency>
 					<dependency>
@@ -85,9 +67,9 @@
 						<version>${symbol_dollar}{xtext.version}</version>
 					</dependency>
 					<dependency>
-						<groupId>org.eclipse.equinox</groupId>
-						<artifactId>common</artifactId>
-						<version>3.6.200-v20130402-1505</version>
+						<groupId>org.eclipse.xtext</groupId>
+						<artifactId>xtext-antlr-generator</artifactId>
+						<version>[2.1.1, 3)</version>
 					</dependency>
 				</dependencies>
 			</plugin>
@@ -95,11 +77,51 @@
 				<groupId>org.eclipse.xtend</groupId>
 				<artifactId>xtend-maven-plugin</artifactId>
 			</plugin>
+	
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<configuration>
+					<filesets combine.children="append">
+						<fileset>
+							<directory>${symbol_dollar}{basedir}/../${package}/src-gen/</directory>
+							<includes>
+								<include>**/*</include>
+							</includes>
+						</fileset>
+						<fileset>
+							<directory>${symbol_dollar}{basedir}/../${package}.tests/src-gen/</directory>
+							<includes>
+								<include>**/*</include>
+							</includes>
+						</fileset>
+						<fileset>
+							<directory>${symbol_dollar}{basedir}/../${package}.ide/src-gen/</directory>
+							<includes>
+								<include>**/*</include>
+							</includes>
+						</fileset>
+						<fileset>
+							<directory>${symbol_dollar}{basedir}/../${package}.ui/src-gen/</directory>
+							<includes>
+								<include>**/*</include>
+							</includes>
+						</fileset>
+						<fileset>
+							<directory>${symbol_dollar}{basedir}/../${package}.ui.tests/src-gen/</directory>
+							<includes>
+								<include>**/*</include>
+							</includes>
+						</fileset>
+						<fileset>
+							<directory>${symbol_dollar}{basedir}/model/generated/</directory>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
 		</plugins>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings 
-					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -133,4 +155,6 @@
 			</plugins>
 		</pluginManagement>
 	</build>
+
 </project>
+

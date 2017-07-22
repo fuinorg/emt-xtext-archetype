@@ -19,36 +19,6 @@
 
 	<fileSets>	    
 				<fileSet filtered="true">
-			<directory>__package__.releng/.settings</directory>
-			<includes>
-				<include>org.eclipse.core.resources.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.releng/.settings</directory>
-			<includes>
-				<include>org.eclipse.m2e.core.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.releng</directory>
-			<includes>
-				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.releng</directory>
-			<includes>
-				<include>__package__.releng.launch</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.releng</directory>
-			<includes>
-				<include>.project</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
 			<directory>example-project-gradle</directory>
 			<includes>
 				<include>gradlew</include>
@@ -97,39 +67,9 @@
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
-			<directory>__package__/.settings</directory>
-			<includes>
-				<include>org.eclipse.jdt.core.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__/.settings</directory>
-			<includes>
-				<include>org.eclipse.xtend.core.Xtend.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__/.settings</directory>
-			<includes>
-				<include>org.eclipse.core.resources.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__/.settings</directory>
-			<includes>
-				<include>org.eclipse.m2e.core.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
 			<directory>__package__</directory>
 			<includes>
 				<include>build.properties</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__</directory>
-			<includes>
-				<include>.classpath</include>
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
@@ -139,27 +79,15 @@
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
-			<directory>__package__</directory>
-			<includes>
-				<include>plugin.xml_gen</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__/.launch</directory>
-			<includes>
-				<include>Launch Runtime Eclipse.launch</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__/.launch</directory>
-			<includes>
-				<include>Generate Language Infrastructure (__package__).launch</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
 			<directory>__package__/src/__basePackagePath__/formatting</directory>
 			<includes>
 				<include>__dslName__Formatter.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__/src/__basePackagePath__</directory>
+			<includes>
+				<include>__dslName__RuntimeModule.xtend</include>
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
@@ -181,6 +109,12 @@
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
+			<directory>__package__/src/__basePackagePath__</directory>
+			<includes>
+				<include>__dslName__StandaloneSetup.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
 			<directory>__package__/src/__basePackagePath__/validation</directory>
 			<includes>
 				<include>__dslName__Validator.xtend</include>
@@ -193,45 +127,45 @@
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
-			<directory>__package__/src/__basePackagePath__</directory>
-			<includes>
-				<include>__dslName__RuntimeModule.java</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__/src/__basePackagePath__</directory>
-			<includes>
-				<include>__dslName__StandaloneSetup.java</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
 			<directory>__package__/META-INF</directory>
 			<includes>
 				<include>MANIFEST.MF</include>
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
-			<directory>__package__</directory>
+			<directory>__package__.ide</directory>
 			<includes>
-				<include>.project</include>
+				<include>build.properties</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ide</directory>
+			<includes>
+				<include>pom.xml</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ide/src/__basePackagePath__/ide</directory>
+			<includes>
+				<include>__dslName__IdeModule.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ide/src/__basePackagePath__/ide</directory>
+			<includes>
+				<include>__dslName__IdeSetup.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
+			<directory>__package__.ide/META-INF</directory>
+			<includes>
+				<include>MANIFEST.MF</include>
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
 			<directory></directory>
 			<includes>
 				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.sdk/.settings</directory>
-			<includes>
-				<include>org.eclipse.core.resources.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.sdk/.settings</directory>
-			<includes>
-				<include>org.eclipse.m2e.core.prefs</include>
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
@@ -253,39 +187,9 @@
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
-			<directory>__package__.sdk</directory>
-			<includes>
-				<include>.project</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
 			<directory>__package__.ui</directory>
 			<includes>
 				<include>plugin.xml</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.ui/.settings</directory>
-			<includes>
-				<include>org.eclipse.jdt.core.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.ui/.settings</directory>
-			<includes>
-				<include>org.eclipse.xtend.core.Xtend.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.ui/.settings</directory>
-			<includes>
-				<include>org.eclipse.core.resources.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.ui/.settings</directory>
-			<includes>
-				<include>org.eclipse.m2e.core.prefs</include>
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
@@ -297,19 +201,7 @@
 				<fileSet filtered="true">
 			<directory>__package__.ui</directory>
 			<includes>
-				<include>.classpath</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.ui</directory>
-			<includes>
 				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.ui</directory>
-			<includes>
-				<include>plugin.xml_gen</include>
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
@@ -325,6 +217,12 @@
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
+			<directory>__package__.ui/src/__basePackagePath__/ui</directory>
+			<includes>
+				<include>__dslName__UiModule.xtend</include>
+			</includes>
+		</fileSet>
+				<fileSet filtered="true">
 			<directory>__package__.ui/src/__basePackagePath__/ui/quickfix</directory>
 			<includes>
 				<include>__dslName__QuickfixProvider.xtend</include>
@@ -334,12 +232,6 @@
 			<directory>__package__.ui/src/__basePackagePath__/ui/outline</directory>
 			<includes>
 				<include>__dslName__OutlineTreeProvider.xtend</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.ui/src/__basePackagePath__/ui</directory>
-			<includes>
-				<include>__dslName__UiModule.java</include>
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
@@ -355,33 +247,9 @@
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
-			<directory>__package__.ui</directory>
-			<includes>
-				<include>.project</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.updatesite/.settings</directory>
-			<includes>
-				<include>org.eclipse.core.resources.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.updatesite/.settings</directory>
-			<includes>
-				<include>org.eclipse.m2e.core.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
 			<directory>__package__.updatesite</directory>
 			<includes>
 				<include>pom.xml</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.updatesite</directory>
-			<includes>
-				<include>.project</include>
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
@@ -397,39 +265,9 @@
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
-			<directory>__package__.tests/.settings</directory>
-			<includes>
-				<include>org.eclipse.jdt.core.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.tests/.settings</directory>
-			<includes>
-				<include>org.eclipse.xtend.core.Xtend.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.tests/.settings</directory>
-			<includes>
-				<include>org.eclipse.core.resources.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.tests/.settings</directory>
-			<includes>
-				<include>org.eclipse.m2e.core.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
 			<directory>__package__.tests</directory>
 			<includes>
 				<include>build.properties</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.tests</directory>
-			<includes>
-				<include>.classpath</include>
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
@@ -445,57 +283,15 @@
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
-			<directory>__package__.tests/src/__packagePath__/tests</directory>
+			<directory>__package__.tests/src/__basePackagePath__/tests</directory>
 			<includes>
-				<include>SimpleParsingTest.xtend</include>
+				<include>__dslName__ParsingTest.xtend</include>
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
 			<directory>__package__.tests/META-INF</directory>
 			<includes>
 				<include>MANIFEST.MF</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>__package__.tests</directory>
-			<includes>
-				<include>.project</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>example-project/.settings</directory>
-			<includes>
-				<include>org.eclipse.jdt.core.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>example-project/.settings</directory>
-			<includes>
-				<include>org.eclipse.xtend.core.Xtend.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>example-project/.settings</directory>
-			<includes>
-				<include>org.eclipse.core.resources.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>example-project/.settings</directory>
-			<includes>
-				<include>__basePackage__.__dslName__.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>example-project/.settings</directory>
-			<includes>
-				<include>org.eclipse.m2e.core.prefs</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory>example-project</directory>
-			<includes>
-				<include>.classpath</include>
 			</includes>
 		</fileSet>
 				<fileSet filtered="true">
@@ -522,25 +318,7 @@
 				<include>SuperManTest.xtend</include>
 			</includes>
 		</fileSet>
-				<fileSet filtered="true">
-			<directory>example-project</directory>
-			<includes>
-				<include>.project</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="true">
-			<directory></directory>
-			<includes>
-				<include>.project</include>
-			</includes>
-		</fileSet>
 						<fileSet filtered="false">
-			<directory>__package__.releng</directory>
-			<includes>
-				<include>.antlr-generator-3.2.0.jar</include>
-			</includes>
-		</fileSet>
-				<fileSet filtered="false">
 			<directory>example-project-gradle/gradle/wrapper</directory>
 			<includes>
 				<include>gradle-wrapper.jar</include>

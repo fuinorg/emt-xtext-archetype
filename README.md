@@ -18,6 +18,7 @@ Generated structure
 ```
 >com.mycompany.mydsl
 |-- com.mycompany.mydsl
+|-- com.mycompany.mydsl.ide
 |-- com.mycompany.mydsl.sdk
 |-- com.mycompany.mydsl.tests
 |-- com.mycompany.mydsl.ui
@@ -27,6 +28,7 @@ Generated structure
 ```
 
 * __.mydsl__ Grammar and base classes for the DSL.
+* __.mydsl.ide__ Standalone setup.
 * __.mydsl.sdk__ The feature.
 * __.mydsl.tests__ Contains the tests.
 * __.mydsl.ui__ UI related parts.

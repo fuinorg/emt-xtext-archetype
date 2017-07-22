@@ -1,14 +1,15 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-<?xml version="1.0" encoding="UTF-8"?>
-<project>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <relativePath>../${package}.releng/pom.xml</relativePath>
+    <relativePath>../pom.xml</relativePath>
     <groupId>${package}</groupId>
-    <artifactId>releng</artifactId>
+    <artifactId>parent</artifactId>
     <version>${version}</version>
   </parent>
 

@@ -1,0 +1,18 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ${package}.ide
+Bundle-SymbolicName: ${package}.ide;singleton:=true
+Bundle-Version: ${eclipseVersion}
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
+Export-Package: ${basePackage}.ide.contentassist.antlr,
+ ${basePackage}.ide.contentassist.antlr.internal
+Require-Bundle: org.antlr.runtime,
+ org.eclipse.xtext.xbase.lib,
+ ${package},
+ org.eclipse.xtext.ide,
+ org.eclipse.xtext.xbase.ide
+

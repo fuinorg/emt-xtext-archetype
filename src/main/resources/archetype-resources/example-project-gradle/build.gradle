@@ -4,8 +4,8 @@
 
 plugins {
   id "eclipse"
-  id "org.xtext.xtend" version "1.0.0"
-  id "org.xtext.builder" version "1.0.0"
+  id "org.xtext.xtend" version "1.0.16"
+  id "org.xtext.builder" version "1.0.16"
 }
 
 repositories {
@@ -16,7 +16,7 @@ repositories {
 dependencies {
     xtextLanguages '${package}:${package}:${version}'
 
-    compile 'org.eclipse.xtend:org.eclipse.xtend.lib:2.9.0'
+    compile 'org.eclipse.xtend:org.eclipse.xtend.lib:2.11.0'
     testCompile 'junit:junit:4.12'
 }
 
