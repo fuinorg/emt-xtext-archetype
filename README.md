@@ -69,7 +69,7 @@ Create project
 mvn archetype:generate \
      -DarchetypeGroupId=org.fuin.archetypes \
      -DarchetypeArtifactId=emt-xtext-archetype \
-     -DarchetypeVersion=0.2.0-SNAPSHOT
+     -DarchetypeVersion=0.2.0
 ```
 
 **All Parameters**
