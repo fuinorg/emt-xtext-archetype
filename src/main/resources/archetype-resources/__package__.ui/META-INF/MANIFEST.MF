@@ -1,6 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
+#set($ActivatorName = $techName.substring(0,1).toUpperCase() + $techName.substring(1))
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: ${package}.ui
@@ -30,4 +31,4 @@ Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Export-Package: ${basePackage}.ui.quickfix,
  ${basePackage}.ui.contentassist,
  ${package}.ui.internal
-Bundle-Activator: ${package}.ui.internal.HerolanguageActivator
+Bundle-Activator: ${package}.ui.internal.${ActivatorName}Activator
