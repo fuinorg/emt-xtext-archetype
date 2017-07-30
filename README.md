@@ -69,7 +69,7 @@ Create project
 mvn archetype:generate \
      -DarchetypeGroupId=org.fuin.archetypes \
      -DarchetypeArtifactId=emt-xtext-archetype \
-     -DarchetypeVersion=0.2.0
+     -DarchetypeVersion=0.2.1-SNAPSHOT
 ```
 
 **All Parameters**
@@ -77,15 +77,15 @@ mvn archetype:generate \
 mvn archetype:generate \
      -DarchetypeGroupId=org.fuin.archetypes \
      -DarchetypeArtifactId=emt-xtext-archetype \
-     -DarchetypeVersion=0.2.0 \
+     -DarchetypeVersion=0.2.1-SNAPSHOT
      -DgroupId="com.mycompany.mydsl"
 	 -DartifactId="com.mycompany.mydsl" \
 	 -Dversion="0.1.0-SNAPSHOT" \
 	 -DeclipseVersion="0.1.0.qualifier" \
 	 -Dpackage="com.mycompany.mydsl" \
 	 -DpackagePath="com/mycompany/mydsl" \
-	 -DbasePackage="com.mycompany" \
-	 -DbasePackagePath="com/mycompany" \
+	 -DbasePackage="com.mycompany.mydsl" \
+	 -DbasePackagePath="com/mycompany/mydsl" \
 	 -DdslName="MyDSL" \
 	 -DtechName="mydsl" \
 	 -DdslExtension="mydsl" \

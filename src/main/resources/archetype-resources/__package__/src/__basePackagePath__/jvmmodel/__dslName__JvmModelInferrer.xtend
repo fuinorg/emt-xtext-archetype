@@ -4,7 +4,7 @@
 package ${basePackage}.jvmmodel
 
 import com.google.inject.Inject
-import ${package}.Heros
+import ${package}.${techName}.Heros
 import org.eclipse.xtext.xbase.jvmmodel.AbstractModelInferrer
 import org.eclipse.xtext.xbase.jvmmodel.IJvmDeclaredTypeAcceptor
 import org.eclipse.xtext.xbase.jvmmodel.JvmTypesBuilder
