@@ -77,15 +77,15 @@ mvn archetype:generate \
 mvn archetype:generate \
      -DarchetypeGroupId=org.fuin.archetypes \
      -DarchetypeArtifactId=emt-xtext-archetype \
-     -DarchetypeVersion=0.2.1-SNAPSHOT
-     -DgroupId="com.mycompany.mydsl"
+     -DarchetypeVersion=0.2.1-SNAPSHOT \
+     -DgroupId="com.mycompany.mydsl" \
 	 -DartifactId="com.mycompany.mydsl" \
 	 -Dversion="0.1.0-SNAPSHOT" \
 	 -DeclipseVersion="0.1.0.qualifier" \
 	 -Dpackage="com.mycompany.mydsl" \
 	 -DpackagePath="com/mycompany/mydsl" \
-	 -DbasePackage="com.mycompany.mydsl" \
-	 -DbasePackagePath="com/mycompany/mydsl" \
+	 -DbasePackage="com.mycompany" \
+	 -DbasePackagePath="com/mycompany" \
 	 -DdslName="MyDSL" \
 	 -DtechName="mydsl" \
 	 -DdslExtension="mydsl" \
