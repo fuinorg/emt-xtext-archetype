@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-#set($ActivatorName = $techName.substring(0,1).toUpperCase() + $techName.substring(1))
+#set($ActivatorName = $dslExtension.substring(0,1).toUpperCase() + $dslExtension.substring(1))
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: ${package}.ui
