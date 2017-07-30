@@ -5,11 +5,11 @@ __Eclipse Maven Tycho Xtext Archetype__
 Continuous Integration   
 ----------------------
 
-[![Build Status](https://fuin-org.ci.cloudbees.com/job/emt-xtext-archeytpe/badge/icon)](https://fuin-org.ci.cloudbees.com/job/emt-xtext-archeytpe/)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.fuin.archetypes/emt-xtext-archeytpe/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.fuin.archetypes/emt-xtext-archeytpe/)
+[![Build Status](https://fuin-org.ci.cloudbees.com/job/emt-xtext-archetype/badge/icon)](https://fuin-org.ci.cloudbees.com/job/emt-xtext-archetype/)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.fuin.archetypes/emt-xtext-archetype/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.fuin.archetypes/emt-xtext-archetype/)
 [![LGPLv3 License](http://img.shields.io/badge/license-LGPLv3-blue.svg)](https://www.gnu.org/licenses/lgpl.html)
 
-<a href="https://fuin-org.ci.cloudbees.com/job/emt-xtext-archeytpe"><img src="http://www.fuin.org/images/Button-Built-on-CB-1.png" width="213" height="72" border="0" alt="Built on CloudBees"/></a>
+<a href="https://fuin-org.ci.cloudbees.com/job/emt-xtext-archetype"><img src="http://www.fuin.org/images/Button-Built-on-CB-1.png" width="213" height="72" border="0" alt="Built on CloudBees"/></a>
 
 Summary
 -------
