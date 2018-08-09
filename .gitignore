@@ -1,2 +1,5 @@
-/.settings
-/target
+.*
+!.gitignore
+!.gitkeep
+!.mvn
+target
